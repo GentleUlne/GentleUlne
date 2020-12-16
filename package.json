@@ -8,7 +8,7 @@
     "dev": "nodemon -e js,html --ignore node_modules --ignore public/libs"
   },
   "keywords": [],
-  "author": "Everson Augusto Guerra de Andrade",
+  "author": "Caio Maqueise Alécio Pinheiro",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",

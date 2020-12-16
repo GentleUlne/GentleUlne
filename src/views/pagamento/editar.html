@@ -4,16 +4,16 @@
 
     <section class="card m-5">
         <header class="card-header">
-            <h3>Adicionar produto</h3>
+            <h3>Alterar pagamento</h3>
         </header>
         <div class="card-body">
-            <form action="/categoria-produto/salvar" method="post"> 
-                
+            <form action="/pagamento/atualizar" method="post">
+                <input type="hidden" name="id" value={{pagamento.id}}> 
                 <div class="form-group">
-                    <label>descricao</label>
-                    <input type="text" name="descricao" class="form-control">
+                    <label>Descrição</label>
+                    <input type="text" name="descricao" value="{{pagamento.descricao}}" class="form-control">
                 </div>
-                
+               
                 <button type="submit" class="btn btn-primary">Salvar</button>
             </form>
         </div><!-- card-body -->

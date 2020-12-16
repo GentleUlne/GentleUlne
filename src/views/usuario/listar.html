@@ -4,26 +4,28 @@
 
     <section class="card m-5">
         <header class="card-header">
-            <h3>Clientes</h3>
+            <h3>usuario</h3>
         </header>
         <div class="card-body">
-            <a href="/cliente/adicionar" class="btn btn-primary m-2">Adicionar</a>
+            <a href="/usuario/adicionar" class="btn btn-primary m-2">Adicionar</a>
             <table class="table">
                 <thead>
                     <th>ID</th>
                     <th>Nome</th>
-                    <th>CPF</th>
+                    <th>email</th>
+                    <th>senha</th>
                     <th>Ações</th>
                 </thead>
                 <tbody>
-                    {% for cliente in clientes %} 
+                    {% for usuario in usuario %} 
                         <tr>
-                            <td>{{cliente.id}}</td>
-                            <td>{{cliente.nome}}</td>
-                            <td>{{cliente.cpf}}</td>
+                            <td>{{usuario.id}}</td>
+                            <td>{{usuario.nome}}</td>
+                            <td>{{usuario.email}}</td>
+                            <td>{{usuario.senha}}</td>
                             <td>
-                                <a href="/cliente/editar/{{cliente.id}}">Editar</a>
-                                <a href="/cliente/deletar/{{cliente.id}}">Excluir</a>
+                                <a href="/usuario/editar/{{usuario.id}}">Editar</a>
+                                <a href="/usuario/deletar/{{usuario.id}}">Excluir</a>
                             </td>
                         </tr>
                     {% endfor %}

@@ -4,7 +4,7 @@
 
     <section class="card m-5">
         <header class="card-header">
-            <h3>Categoria de Produto</h3>
+            <h3>Categorias de Produtos</h3>
         </header>
         <div class="card-body">
             <a href="/categoria-produto/adicionar" class="btn btn-primary m-2">Adicionar</a>
@@ -15,13 +15,14 @@
                     <th>Ações</th>
                 </thead>
                 <tbody>
-                    {% for categoria in categorias %} 
+                    {% for categoria_produto in categoria_produto %} 
                         <tr>
-                            <td>{{ categoria.id }}</td>
-                            <td>{{ categoria.descricao }}</td>
+                            <td>{{categoria_produto.id}}</td>
+                            <td>{{categoria_produto.descricao}}</td>
+                          
                             <td>
-                                <a href="/cliente/editar/{{cliente.id}}">Editar</a>
-                                <a href="/cliente/excluir/{{cliente.id}}">Excluir</a>
+                                <a href="/categoria-produto/editar/{{categoria_produto.id}}">Editar</a>
+                                <a href="/categoria-produto/deletar/{{categoria_produto.id}}">Excluir</a>
                             </td>
                         </tr>
                     {% endfor %}
